@@ -21,8 +21,48 @@
 </header>
 
 <main class="site-main">
-    <h1>Форма заказа</h1>
-    <p>Добро пожаловать в наш магазин</p>
+    <section class="order-section">
+        <h1 class="order-section__title">Оформление заказа</h1>
+        <p class="order-section__descr">Заполните форму ниже, чтобы забронировать iPhone 16 Pro.</p>
+
+        <!-- Главный тег ФОРМЫ -->
+        <form class="order-form" action="#" method="POST">
+            
+            <div class="order-form__group">
+                <label class="order-form__label" for="user-name">Ваше имя и фамилия:</label>
+                <input class="order-form__input" id="user-name" type="text" name="username" placeholder="Иван Иванов" required>
+            </div>
+
+            <div class="order-form__group">
+                <label class="order-form__label" for="user-phone">Номер телефона:</label>
+                <input class="order-form__input" id="user-phone" type="tel" name="userphone" placeholder="+7 (999) 999-99-99" required>
+            </div>
+
+            <div class="order-form__group">
+                <label class="order-form__label" for="user-email">Электронная почта (Email):</label>
+                <input class="order-form__input" id="user-email" type="email" name="useremail" placeholder="example@mail.ru" required>
+            </div>
+
+            <div class="order-form__group">
+                <label class="order-form__label" for="product-select">Выберите конфигурацию:</label>
+                <select class="order-form__select" id="product-select" name="product_config">
+                    <option value="16pro-256">iPhone 16 Pro — 256 ГБ (Titanium)</option>
+                    <option value="16pro-512">iPhone 16 Pro — 512 ГБ (Titanium)</option>
+                    <option value="16promax-256">iPhone 16 Pro Max — 256 ГБ (Black)</option>
+                </select>
+            </div>
+
+            <!-- Комментарий Большой текст -->
+            <div class="order-form__group">
+                <label class="order-form__label" for="user-comment">Комментарий к заказу:</label>
+                <textarea class="order-form__textarea" id="user-comment" name="usercomment" placeholder="Укажите удобное время для звонка менеджера"></textarea>
+            </div>
+
+            <!-- Кнопка отправки формы -->
+            <button class="order-form__submit-btn" type="submit">Подтвердить заказ</button>
+
+        </form>
+    </section>
 </main>
 
 <footer class="site-footer">

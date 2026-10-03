@@ -5,30 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
+
     <header class="site-header">
-    <nav class="site-nav">
-        <ul class="site-nav__list">
-            <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заказ</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav class="site-nav">
+            <ul class="site-nav__list">
+                <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заказ</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main class="site-main">
-    <h1>Главная страница</h1>
-    <p>Добро пожаловать в наш магазин</p>
-</main>
+    <main class="site-main">
+        <!-- Секция 1: Приветствие -->
+        <section class="hero">
+            <h1 class="hero__title">Оригинальная техника Apple в магазине iStore</h1>
+            <p class="hero__descr">Новейшие iPhone, MacBook и iPad с официальной гарантией. </p>
+            
+            <a class="hero__btn" href="#advantages">Наши преимущества</a>
+        </section>
 
-<footer class="site-footer">
-    <p class="site-footer__text">© 2026 Все права защищены.</p>
-</footer>
+        <!-- Секция 2: Блок преимуществ -->
+        <section class="advantages" id="advantages">
+            <h2 class="advantages__title">Почему выбирают iStore?</h2>
+            <ul class="advantages__list">
+                <li class="advantages__item"><strong>100% Оригинал:</strong> Только подлинная техника в заводской упаковке(отвечаю оригинал).</li>
+                <li class="advantages__item"><strong>Гарантия:</strong> Один год официального обслуживания на все гаджеты(вы не вернете товар).</li>
+                <li class="advantages__item"><strong>Доставка:</strong> Экспресс-доставка до вашей двери в день заказа(за оплату наличкой)</li>
+            </ul>
+        </section>
+    </main>
 
-    
+    <!-- Подвал сайта -->
+    <footer class="site-footer">
+        <p class="site-footer__text">© 2026 iStore. Все права защищены.</p>
+    </footer>
+
 </body>
 </html>
