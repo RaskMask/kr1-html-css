@@ -1,0 +1,320 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* ПАЛИТРА ЦВЕТОВ */
+:root {
+    --bg-color: #232326;
+    --card-bg: #1c1c1e;
+    --text-main: #f5f5f7;
+    --accent-color: #2997ff;
+    --accent-hover: #43a4ff;
+    --border-color: #3a3a3c;
+}
+
+
+/* ГЛОБАЛЬНЫЕ СТИЛИ САЙТА */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+/* СТИЛИЗАЦИЯ ШАПКИ И МЕНЮ НАВИГАЦИИ */
+
+/* Общая коробка шапки */
+.site-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Контейнер для навигации */
+.site-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Список ссылок */
+.site-nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    height: 48px;
+    align-items: center;
+}
+
+/* Кнопки меню */
+.site-nav__link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+/* Наведение мышки*/
+.site-nav__link:hover {
+    color: var(--text-main);
+}
+
+/* 5. СТИЛИЗАЦИЯ ЦЕНТРАЛЬНОГО КОНТЕНТА И ГЛАВНОЙ СТРАНИЦЫ */
+
+.site-main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero__title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.hero__descr {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.hero__btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 980px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.hero__btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.advantages {
+    padding: 60px 0;
+}
+
+.advantages__title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.advantages__list {
+    list-style: none;
+}
+
+.advantages__item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+/* СТИЛИЗАЦИЯ КАТАЛОГА */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+}
+
+.product-card__title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.product-card__price {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+.product-card__button {
+    display: block;
+    background-color: var(--accent-color);
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.product-card__button:hover {
+    background-color: var(--accent-hover);
+}
+
+.product-card__badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #34c759;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.product-card__badge--sale {
+    background-color: #ff3b30;
+}
+
+.product-card__image {
+    display: block;
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto 20px auto; 
+}
+/* СТИЛИЗАЦИЯ ТАБЛИЦЫ ХАРАКТЕРИСТИК */
+
+.features-table {
+    width: 100%;
+    margin: 30px 0;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.features-table__cell {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color); 
+    font-size: 15px;
+}
+
+.features-table__cell--header {
+    background-color: #2c2c2e;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.features-table__cell--title {
+    color: var(--text-muted); 
+    width: 40%;
+}
+
+.product-detail__buy-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+.product-detail__buy-btn:hover {
+    background-color: var(--accent-hover);
+}
+/* СТИЛИЗАЦИЯ ФОРМЫ ЗАКАЗА И ИНПУТОВ */
+
+.order-form {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.order-form__group {
+    margin-bottom: 24px;
+}
+
+.order-form__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.order-form__input,
+.order-form__select,
+.order-form__textarea {
+    width: 100%;
+    background-color: #2c2c2e;
+    border: 1px solid var(--border-color);
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.order-form__input:focus,
+.order-form__select:focus,
+.order-form__textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.order-form__textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.order-form__submit-btn {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--text-main);
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.order-form__submit-btn:hover {
+    background-color: var(--accent-hover);
+}
+/* ФУТЕР */
+.site-footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-muted);
+    font-size: 14px;
+    border-top: 1px solid var(--border-color); 
+    margin-top: 60px;
+}
